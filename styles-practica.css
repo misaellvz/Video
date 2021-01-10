@@ -1,0 +1,57 @@
+body {
+  background: linear-gradient(25deg, rgba(38,185,136,1) 0%, rgba(18,124,166,1) 56%, rgba(46,38,185,1) 100%);
+  width: 100%;
+  font-family: 'Muli', sans-serif;
+  margin: 0;
+}
+*  {
+  box-sizing: border-box;
+}
+.header {
+  width: 100%;
+  color: white;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0px;
+}
+.header-menu {
+  cursor: pointer;
+  margin-right: 30px;
+}
+.logo {
+  margin: 10px 10px;
+  width: 90px;
+  height: 70px;
+}
+.usuario {
+  display: none;
+  list-style: none;
+  margin: 0px 0px 0px -14px;
+  padding: 0px;
+  position: absolute;
+  width: 100px;
+  text-align: right;
+}
+.header-menu:hover .usuario {
+  display: block;
+}
+.usuario li {
+  margin: 10px 0px;
+}
+.usuario li > a {
+  text-decoration: none;
+  color: white;
+}
+.usuario li > a:hover {
+  text-decoration: underline;
+}
+.profile {
+  display: flex;
+  align-items: center;
+}
+.profile img {
+  margin-right: 10px;
+  width: 40px;
+}
