@@ -84,6 +84,49 @@ body {
   position: absolute;
   padding-left: 30px;
   width: 100%;
+  cursor: pointer;
+}
+.carusel {
+  width: 100%;
+  padding-left: 30px;
+  position: relative;
+  overflow: scroll;
+  display: flex;
+}
+.carusel-container {
+  margin: 70px 0px;
+  padding-bottom: 10px;
+}
+.carusel-item {
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  margin-right: 10px;
+}
+.carusel-item img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+}
+.carusel-details {
+  display: flex;
+  position: absolute;
+  justify-content: flex-end;
+  flex-direction: column;
+  font-size: 10px;
+}
+.carusel-details img {
+  width: 20px;
+  height: ;
+}
+.title {
+  color: white;
+  margin: 5px 0px 0px 0px;
 }
 
 .footer {
