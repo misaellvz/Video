@@ -73,6 +73,7 @@ body {
   padding: 0px 20px;
   margin-bottom: 20px;
   font-size: 16px;
+  color: white;
 }
 ::placeholder {
   color: white;
@@ -90,12 +91,13 @@ body {
   width: 100%;
   padding-left: 30px;
   position: relative;
-  overflow: scroll;
+  overflow: auto;
   display: flex;
 }
 .carusel-container {
   margin: 70px 0px;
   padding-bottom: 10px;
+  white-space: nowrap;
 }
 .carusel-item {
   width: 200px;
@@ -107,7 +109,21 @@ body {
   overflow: hidden;
   position: relative;
   margin-right: 10px;
+  transform-origin: center left;
+  transition: 450ms all;
 }
+
+.carusel-item:hover ~ .carusel-item {
+  transform: translate3d(100px, 0, 0);
+}
+.carusel-container:hover .carusel-item {
+  opacity: 0.3;
+}
+.carusel-container:hover .carusel-item:hover, .carusel-details {
+  opacity: 1;
+  transform: scale(1.5);
+}
+
 .carusel-item img {
   width: 200px;
   height: 250px;
@@ -119,14 +135,26 @@ body {
   justify-content: flex-end;
   flex-direction: column;
   font-size: 10px;
+  bottom: 10px;
+  left: 20px;
+  padding-left: 10px;
+  opacity: 0;
+  transition: 450ms opacity;
+}
+.carusel-item:hover .carusel-details{
+  opacity: 1;
 }
 .carusel-details img {
-  width: 20px;
-  height: ;
+  width: 15px;
+  height: 15px;
 }
 .title {
   color: white;
   margin: 5px 0px 0px 0px;
+}
+.subtitle {
+  color: white;
+  font-size: 10px;
 }
 
 .footer {
@@ -142,4 +170,28 @@ body {
 }
 .footer a:hover {
   text-decoration: underline;
+}
+::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar
+{
+  width: 8px;
+  height: 8px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  background-image: -webkit-gradient(linear,
+                     left bottom,
+                     left top,
+                     color-stop(0.44, rgb(38,185,136)),
+                     color-stop(0.72, rgb(8,124,166)),
+                     color-stop(0.99, rgb(46,38,185)));
 }
